@@ -1,1 +1,0 @@
-Application Development - University of Greenwich (Vietnam)

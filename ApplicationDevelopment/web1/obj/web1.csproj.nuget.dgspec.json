@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj": {}
+    "D:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj": {
+    "D:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj",
+        "projectUniqueName": "D:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj",
         "projectName": "web1",
-        "projectPath": "C:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj",
+        "projectPath": "D:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj",
         "packagesPath": "C:\\Users\\longn\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\obj\\",
+        "outputPath": "D:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
