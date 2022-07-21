@@ -350,3 +350,6 @@ D:\workspace\1670-gch0904\ApplicationDevelopment\web2\obj\Debug\netcoreapp3.1\we
 D:\workspace\1670-gch0904\ApplicationDevelopment\web2\obj\Debug\netcoreapp3.1\web2.dll
 D:\workspace\1670-gch0904\ApplicationDevelopment\web2\obj\Debug\netcoreapp3.1\web2.pdb
 D:\workspace\1670-gch0904\ApplicationDevelopment\web2\obj\Debug\netcoreapp3.1\web2.genruntimeconfig.cache
+D:\workspace\1670-gch0904\ApplicationDevelopment\web2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Hello.cshtml.g.cs
+D:\workspace\1670-gch0904\ApplicationDevelopment\web2\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Demo1.cshtml.g.cs
+D:\workspace\1670-gch0904\ApplicationDevelopment\web2\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Demo2.cshtml.g.cs
