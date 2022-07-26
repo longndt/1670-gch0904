@@ -1,0 +1,43 @@
+﻿<p>I am living in <u>@ViewBag.Vietnam</u></p>
+<br />
+
+@* nên tạo biến nếu cần sử dụng nhiều lần trong view *@
+@{
+    var names = ViewBag.Name;
+}
+
+@* Sử dụng vòng lặp foreach để hiển thị List 
+   => Khi không cần quan tâm đến kích thước của mảng
+   hoặc index của phần tử trong mảng
+*@
+@foreach (var name in names)
+{
+    <h4 class="text text-primary">@name</h4>
+}
+
+@* Sử dụng vòng lặp for để hiển thị List
+  => Khi cần lấy ra index của phần tử trong mảng
+*@
+@for (var i = 0; i < names.Count; i++)
+{
+    var j = i + 1;
+    <h4 class="text text-success">@j : @names[i]</h4>
+}
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th class="text text-danger">Person Id</th>
+            <th class="text text-danger">Person Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < names.Count; i++)
+        {
+            var j = i + 1;
+            <tr>
+                <td class="text text-warning">@j</td>
+                <td class="text text-warning">@names[i]</td>
+            </tr>
+        }
+    </tbody>
+</table>

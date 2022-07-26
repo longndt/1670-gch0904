@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web4", "web4\web4.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web5", "web5\web5.csproj", "{BCC0D9DF-0AC3-41B2-96D7-38820A215907}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web6", "web6\web6.csproj", "{DC768831-DB6A-4282-9916-9340678E3B0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BCC0D9DF-0AC3-41B2-96D7-38820A215907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCC0D9DF-0AC3-41B2-96D7-38820A215907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCC0D9DF-0AC3-41B2-96D7-38820A215907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC768831-DB6A-4282-9916-9340678E3B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC768831-DB6A-4282-9916-9340678E3B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC768831-DB6A-4282-9916-9340678E3B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC768831-DB6A-4282-9916-9340678E3B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

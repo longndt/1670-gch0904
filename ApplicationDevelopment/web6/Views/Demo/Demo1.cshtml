@@ -1,0 +1,26 @@
+﻿@* sử dụng Razor để nhận dữ liệu từ Controller (back-end) *@
+
+<h1 class="text text-danger">City: @ViewData["city"]</h1>
+<h2 class="text text-dark">Year: @ViewData["year"]</h2>
+<h3 class="text text-info">Grade: @ViewData["GRADE"]</h3>
+<h4 class="text text-secondary">University: @ViewData["greenwich"]</h4>
+@if (ViewData["Pass"].Equals(true))
+{
+    <h5 class="text text-primary">Pass</h5>
+}
+else {
+    <h5 class="text text-primary">Fail</h5>
+}
+@{
+    var result = false;
+    if ((int)(ViewData["year"]) == DateTime.Now.Year)
+    {
+       result = true;
+    }
+}
+@if (result == true)
+{
+    <h6>@ViewData["year"] is current year</h6>
+} else {
+    <h6>@ViewData["year"] is not current year</h6>
+}
