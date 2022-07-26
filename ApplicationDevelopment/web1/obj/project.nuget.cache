@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RKC02pTDAKBHYdVyPIiCd6ujdQWnvJZy9UqpHZ2KR0LO3Rr0AY3WfDZtsBdSt86lmoN3ymbmd9eGAXX58q0Fxg==",
+  "dgSpecHash": "3hf6Uor7/nvRffaGvgjh79H1YAXe+gId5t3TB/n7fFeKEYLUv8iF0mrlJea1JUGKMh0McXASThearSvDKwSeEg==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj",
+  "projectFilePath": "C:\\workspace\\1670-gch0904\\ApplicationDevelopment\\web1\\web1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\longn\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.27\\microsoft.aspnetcore.mvc.razor.extensions.3.1.27.nupkg.sha512",
     "C:\\Users\\longn\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.27\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.27.nupkg.sha512",
