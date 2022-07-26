@@ -355,3 +355,5 @@ C:\workspace\1670-gch0904\ApplicationDevelopment\web6\obj\Debug\netcoreapp3.1\Ra
 C:\workspace\1670-gch0904\ApplicationDevelopment\web6\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Demo1.cshtml.g.cs
 C:\workspace\1670-gch0904\ApplicationDevelopment\web6\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Demo2.cshtml.g.cs
 C:\workspace\1670-gch0904\ApplicationDevelopment\web6\obj\Debug\netcoreapp3.1\Razor\Views\Demo\Demo3.cshtml.g.cs
+C:\workspace\1670-gch0904\ApplicationDevelopment\web6\obj\Debug\netcoreapp3.1\Razor\Views\Shared\MyLayout.cshtml.g.cs
+C:\workspace\1670-gch0904\ApplicationDevelopment\web6\obj\Debug\netcoreapp3.1\Razor\Views\Test\MyView.cshtml.g.cs

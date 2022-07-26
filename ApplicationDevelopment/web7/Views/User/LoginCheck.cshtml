@@ -1,0 +1,12 @@
+﻿@model web7.Models.User 
+
+@*
+<h1 class="alert alert-danger">@ViewBag.Result</h1>
+*@
+
+@if (Model.UserName == "admin" && Model.Password == "123456")
+{
+    <h1 class="alert alert-danger">Login succeed !</h1>
+} else {
+    <h1 class="alert alert-danger">Login failed !</h1>
+}

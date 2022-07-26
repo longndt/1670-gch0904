@@ -64,6 +64,11 @@ namespace web6.Controllers
             //Note: 1 action chỉ gửi được 1 model duy nhất
             return View(mobiles);
         }
+
+        public IActionResult Demo123()
+        {
+            return View("~/Views/Test/MyView.cshtml");
+        }
         
     }
 }
