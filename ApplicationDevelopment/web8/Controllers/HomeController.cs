@@ -20,9 +20,12 @@ namespace web8.Controllers
 
         public IActionResult Index()
         {
+            //Cách 1: render ra view khác ở hàm Index trong HomeController
+            //return View("~/Views/Employee/Form.cshtml");
             return View();
         }
 
+        [Route("/privacy")]
         public IActionResult Privacy()
         {
             return View();

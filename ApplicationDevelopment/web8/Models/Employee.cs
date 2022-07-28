@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace web8.Models
 {
@@ -22,7 +23,7 @@ namespace web8.Models
 
         public string Department { get; set; }
 
-        public string Strength { get; set; }
+        public List<string> Strength { get; set; }
      
     }
 }

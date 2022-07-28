@@ -6,6 +6,8 @@ namespace web8.Controllers
     public class EmployeeController : Controller
     {
         //hàm này để render ra form cho người dùng nhập liệu
+        //Cách 2: set route để làm homepage
+        [Route("/")]
         public IActionResult Input()
         {
             //mặc định thì 1 Action sẽ render ra View cùng tên với Action đấy

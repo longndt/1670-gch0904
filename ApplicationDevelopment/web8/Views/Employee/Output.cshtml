@@ -67,7 +67,13 @@
                 Strength
             </th>
             <td class="font-italic">
-                @Model.Strength
+               @if (Model.Strength != null)        
+               {
+                   @foreach (var s in Model.Strength)
+                   {
+                       @s <br />
+                   }
+               }      
             </td>
         </tr>
     </table>
