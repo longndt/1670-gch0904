@@ -1,0 +1,32 @@
+﻿@model ICollection<web9.Models.Mobile>
+
+<table class="table table-success">
+    <thead>
+        <tr>
+            <th colspan="6" class="alert alert-danger">Mobile List</th>
+        </tr>
+        <tr>
+            <th>Mobile Id</th>
+            <th>Mobile Name</th>
+            <th>Mobile Brand</th>
+            <th>Mobile Color</th>
+            <th>Mobile Price</th>
+            <th>Mobile Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mobile in Model)
+       {
+           <tr>
+                <td>@mobile.Id</td>
+                <td>@mobile.Name</td>
+                <td>@mobile.Brand</td>
+                <td>@mobile.Color</td>
+                <td>@mobile.Price $</td>
+                <td>
+                    <img src="@mobile.Image" width="100" height="100">
+                </td>
+           </tr>
+       }
+    </tbody>
+</table>    
