@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web3", "web3\web3.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web4", "web4\web4.csproj", "{D75BEEFE-A33A-4FB1-89A9-7C090D300F45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web5", "web5\web5.csproj", "{BCC0D9DF-0AC3-41B2-96D7-38820A215907}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web5", "web5\web5.csproj", "{BCC0D9DF-0AC3-41B2-96D7-38820A215907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web6", "web6\web6.csproj", "{DC768831-DB6A-4282-9916-9340678E3B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web6", "web6\web6.csproj", "{DC768831-DB6A-4282-9916-9340678E3B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web7", "web7\web7.csproj", "{B5A9C02A-E213-45D0-8879-41D3CB92AC5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web7", "web7\web7.csproj", "{B5A9C02A-E213-45D0-8879-41D3CB92AC5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web8", "web8\web8.csproj", "{7E5051E1-2FFA-48E3-890B-03C4BCFD1354}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B5A9C02A-E213-45D0-8879-41D3CB92AC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5A9C02A-E213-45D0-8879-41D3CB92AC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5A9C02A-E213-45D0-8879-41D3CB92AC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E5051E1-2FFA-48E3-890B-03C4BCFD1354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E5051E1-2FFA-48E3-890B-03C4BCFD1354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E5051E1-2FFA-48E3-890B-03C4BCFD1354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E5051E1-2FFA-48E3-890B-03C4BCFD1354}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

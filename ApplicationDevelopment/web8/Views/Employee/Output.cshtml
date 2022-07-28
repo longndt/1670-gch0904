@@ -1,0 +1,74 @@
+﻿<!--- khai báo model để nhận dữ liệu gửi từ controller -->
+@model web8.Models.Employee
+
+<div class="container col-md-7 text-center mt-3">
+    <table class="table table-bordered">
+        <tr>
+            <th colspan="2" class="alert alert-info">Employee Detail</th>
+        </tr>
+        <tr>
+            <th class="text text-primary">
+                Name
+            </th>
+            <td class="font-italic">
+                @Model.Name
+            </td>
+        </tr>
+          <tr>
+            <th class="text text-primary">
+                Age
+            </th>
+            <td class="font-italic">
+                @Model.Age
+            </td>
+        </tr>
+         <tr>
+            <th class="text text-primary">
+                Email
+            </th>
+            <td class="font-italic">
+                @Model.Email
+            </td>
+        </tr>
+         <tr>
+            <th class="text text-primary">
+                Address
+            </th>
+            <td class="font-italic">
+                @Model.Address
+            </td>
+        </tr>
+         <tr>
+            <th class="text text-primary">
+                Gender
+            </th>
+            <td class="font-italic">
+                @Model.Gender
+            </td>
+        </tr>
+          <tr>
+            <th class="text text-primary">
+                Salary
+            </th>
+            <td class="font-italic">
+                @Model.Salary $
+            </td>
+        </tr>
+           <tr>
+            <th class="text text-primary">
+                Department
+            </th>
+            <td class="font-italic">
+                @Model.Department
+            </td>
+        </tr>
+           <tr>
+            <th class="text text-primary">
+                Strength
+            </th>
+            <td class="font-italic">
+                @Model.Strength
+            </td>
+        </tr>
+    </table>
+</div> 
