@@ -1,20 +1,41 @@
-﻿@model ICollection<web9.Models.Mobile>
+﻿@*
+Cách 1: nhận dữ liệu với format là ICollection
+=> sử dụng được với vòng lặp foreach
+@model ICollection<web9.Models.Mobile>
+*@
+<!-- 
+Cách 2: nhận dữ liệu gửi từ controller với format là List
+=> sử dụng được cả vòng lặp foreach và for
+-->
+@model List<web9.Models.Mobile>
+
+<!-- 
+Sự khác biệt giữa vòng lặp for và foreach:
+- foreach: không có index, load toàn bộ dữ liệu (cú pháp đơn giản hơn)
+- for: có index cho từng phần tử, có thể giới hạn dữ liệu được load
+-->
 
 <table class="table table-success">
     <thead>
         <tr>
-            <th colspan="6" class="alert alert-danger">Mobile List</th>
+            <th colspan="7" class="alert alert-danger">Mobile List</th>
         </tr>
         <tr>
-            <th>Mobile Id</th>
+            <th colspan="7" class="alert alert-info">Total: @Model.Count</th>
+        </tr>
+        <tr>
+            <th>Mobile No.</th>
             <th>Mobile Name</th>
             <th>Mobile Brand</th>
             <th>Mobile Color</th>
             <th>Mobile Price</th>
             <th>Mobile Image</th>
+            <th>Menu</th>
         </tr>
     </thead>
     <tbody>
+        <!-- Cách 1: dùng vòng lặp foreach -->
+        @* 
         @foreach (var mobile in Model)
        {
            <tr>
@@ -25,6 +46,28 @@
                 <td>@mobile.Price $</td>
                 <td>
                     <img src="@mobile.Image" width="100" height="100">
+                </td>
+           </tr>
+        }
+        *@
+        @for (var i = 0; i < Model.Count; i++)
+       {
+           <tr>
+                <td>@(i+1)</td>
+                <td>@Model[i].Name</td>
+                <td>@Model[i].Brand</td>
+                <td>@Model[i].Color</td>
+                <td>@Model[i].Price $</td>
+                <td>
+                    <a asp-controller="Mobile" asp-action="Detail" asp-route-id="@Model[i].Id"> 
+                        <img src="@Model[i].Image" width="100" height="100">
+                    </a>       
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="Mobile" asp-action="Edit" asp-route-id="@Model[i].Id">Edit</a>
+                    <a class="btn btn-danger" asp-controller="Mobile" asp-action="Delete" asp-route-id="@Model[i].Id"
+                    onclick="return confirm('Are you sure to delete this mobile ?');"
+                    >Delete</a>
                 </td>
            </tr>
        }
