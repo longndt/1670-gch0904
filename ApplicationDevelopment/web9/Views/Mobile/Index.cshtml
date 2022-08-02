@@ -1,13 +1,16 @@
 ﻿@*
 Cách 1: nhận dữ liệu với format là ICollection
 => sử dụng được với vòng lặp foreach
-@model ICollection<web9.Models.Mobile>
 *@
+@model ICollection<web9.Models.Mobile>
+
 <!-- 
 Cách 2: nhận dữ liệu gửi từ controller với format là List
 => sử dụng được cả vòng lặp foreach và for
 -->
+@*
 @model List<web9.Models.Mobile>
+*@
 
 <!-- 
 Sự khác biệt giữa vòng lặp for và foreach:
@@ -35,7 +38,6 @@ Sự khác biệt giữa vòng lặp for và foreach:
     </thead>
     <tbody>
         <!-- Cách 1: dùng vòng lặp foreach -->
-        @* 
         @foreach (var mobile in Model)
        {
            <tr>
@@ -45,11 +47,19 @@ Sự khác biệt giữa vòng lặp for và foreach:
                 <td>@mobile.Color</td>
                 <td>@mobile.Price $</td>
                 <td>
-                    <img src="@mobile.Image" width="100" height="100">
+                    <a asp-controller="Mobile" asp-action="Detail" asp-route-id="@mobile.Id"> 
+                        <img src="@mobile.Image" width="100" height="100">
+                    </a>
+                <td>
+                    <a class="btn btn-warning" asp-controller="Mobile" asp-action="Edit" asp-route-id="@mobile.Id">Edit</a>
+                    <a class="btn btn-danger" asp-controller="Mobile" asp-action="Delete" asp-route-id="@mobile.Id"
+                    onclick="return confirm('Are you sure to delete this mobile ?');"
+                    >Delete</a>
                 </td>
            </tr>
         }
-        *@
+        <!-- Cách 2: dùng vòng lặp for -->
+        @*
         @for (var i = 0; i < Model.Count; i++)
        {
            <tr>
@@ -71,5 +81,6 @@ Sự khác biệt giữa vòng lặp for và foreach:
                 </td>
            </tr>
        }
+       *@
     </tbody>
 </table>    
