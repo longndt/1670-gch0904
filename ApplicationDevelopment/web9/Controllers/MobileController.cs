@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using web9.Data;
+using web9.Models;
 
 namespace web9.Controllers
 {
@@ -20,6 +21,11 @@ namespace web9.Controllers
         {
             var mobiles = context.Mobile.ToList();
             return View(mobiles);
+        }
+
+        public IActionResult List()
+        {
+            return View(context.Mobile.ToList());
         }
     }
 }

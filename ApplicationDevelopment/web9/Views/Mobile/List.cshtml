@@ -1,0 +1,41 @@
+﻿<!-- Giao diện xem sản phẩm dạng grid cho khách hàng (customer) -->
+@model ICollection<web9.Models.Mobile>
+<h1 class="alert alert-success mb-3">Mobile Store</h1>
+<div class="card-group">
+    <div class="row">
+        @foreach (var mobile in Model)
+       {
+           <div class="col-md-4 mt-3">
+               <div class="card">
+                   <div class="card card-img-top">
+                       <a asp-controller="Mobile" asp-action="Detail" asp-route-id="@mobile.Id">
+                         <img src="@mobile.Image" width="150" height="200">
+                        </a>
+                   </div>
+                   <div class="card card-title">
+                       <h3 class="text text-primary">@mobile.Name</h3>
+                       <h4 class="text text-warning">@mobile.Price $</h4>
+                   </div>
+                   @if (mobile.Quantity >=1 )
+                  {
+                       <div class="card card-subtitle">
+                            <h4 class="text text-secondary">In-stock: @mobile.Quantity</h4>
+                        </div>
+                       <div class="card card-body">
+                           <form action="" method="post">
+                               <input type="hidden" name="id" value="@mobile.Id">
+                               <input type="number" class="form-control" name="quantity" min="1" max="@mobile.Quantity">
+                               <input type="submit" class="btn btn-primary mt-2" value="Add to cart">
+                           </form>
+                        </div>
+                    }else
+                    {
+                       <div class="card card-subtitle">
+                            <h4 class="text text-danger">Out of stock</h4>
+                        </div> 
+                    }
+               </div>
+            </div>
+        }
+    </div>
+</div>
