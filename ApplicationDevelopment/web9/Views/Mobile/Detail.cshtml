@@ -1,0 +1,29 @@
+﻿@model web9.Models.Mobile
+
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <img src="@Model.Image" width="300" height="400" />
+        </div>
+    </div>
+    <div class="col">
+        <div class="card bg-light">
+            <h2 class="alert alert-success">@Model.Name</h2>
+            <h4 class="text text-primary">Brand: @Model.Brand</h4>
+            <h4 class="text text-primary">Color: @Model.Color</h4>
+            <h4 class="text text-primary">Price: @Model.Price $</h4>
+            @if (Model.Quantity >= 1)
+            {
+                <h4 class="text text-primary">Quantity: @Model.Quantity</h4>
+            } else
+            {
+               <h4 class="text text-warning">Out of stock</h4>
+            }
+            <h4 class="text text-primary">Manufacturer Date: @Model.Date.ToShortDateString()</h4>
+            @if (Model.BestSeller == true)
+           {
+               <h3 class="text text-danger">Best-seller</h3>
+           }
+        </div>
+    </div>
+</div>
