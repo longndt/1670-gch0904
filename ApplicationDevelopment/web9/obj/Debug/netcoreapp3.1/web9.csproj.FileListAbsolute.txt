@@ -387,3 +387,5 @@ C:\workspace\1670-gch0904\ApplicationDevelopment\web9\obj\Debug\netcoreapp3.1\we
 C:\workspace\1670-gch0904\ApplicationDevelopment\web9\obj\Debug\netcoreapp3.1\Razor\Views\Mobile\Index.cshtml.g.cs
 C:\workspace\1670-gch0904\ApplicationDevelopment\web9\obj\Debug\netcoreapp3.1\Razor\Views\Mobile\List.cshtml.g.cs
 C:\workspace\1670-gch0904\ApplicationDevelopment\web9\obj\Debug\netcoreapp3.1\Razor\Views\Mobile\Detail.cshtml.g.cs
+C:\workspace\1670-gch0904\ApplicationDevelopment\web9\obj\Debug\netcoreapp3.1\Razor\Views\Mobile\Add.cshtml.g.cs
+C:\workspace\1670-gch0904\ApplicationDevelopment\web9\obj\Debug\netcoreapp3.1\Razor\Views\Mobile\Edit.cshtml.g.cs

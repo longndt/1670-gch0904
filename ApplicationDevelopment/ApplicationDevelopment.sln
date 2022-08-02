@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web7", "web7\web7.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web8", "web8\web8.csproj", "{7E5051E1-2FFA-48E3-890B-03C4BCFD1354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web9", "web9\web9.csproj", "{68A1B9DE-55A4-4FCB-B742-298B91CBAF2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "web9", "web9\web9.csproj", "{68A1B9DE-55A4-4FCB-B742-298B91CBAF2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

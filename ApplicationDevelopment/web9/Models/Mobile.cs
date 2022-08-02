@@ -6,11 +6,11 @@ namespace web9.Models
     public enum Color
     {
         Red, 
-        Blue,
-        Yellow,
         Green,
-        White,
-        Silver
+        Yellow,
+        Black,
+        Silver,
+        Blue
     }
     public class Mobile
     {
@@ -23,6 +23,7 @@ namespace web9.Models
         [StringLength(20,ErrorMessage = "Max length for brand name is 20 characters",MinimumLength = 3)]
         public string Brand { get; set; }
 
+        [Required]
         public string Color { get; set; }
         
         [Required]
@@ -35,9 +36,11 @@ namespace web9.Models
         public int Quantity { get; set; }
 
 
+        [Display(Name = "Manufacturing Date")]
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
+        [Display(Name = "Best Seller")]
         public bool BestSeller { get; set; }
     }
 }

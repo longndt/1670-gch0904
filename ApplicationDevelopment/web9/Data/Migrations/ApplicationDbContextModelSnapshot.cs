@@ -234,6 +234,7 @@ namespace web9.Data.Migrations
                         .HasMaxLength(20);
 
                     b.Property<string>("Color")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Date")
