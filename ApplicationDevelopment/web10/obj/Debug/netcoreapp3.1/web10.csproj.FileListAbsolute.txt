@@ -386,3 +386,7 @@ C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\w
 C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\web10.dll
 C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\web10.pdb
 C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\web10.genruntimeconfig.cache
+C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\Razor\Views\Staff\Create.cshtml.g.cs
+C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\Razor\Views\Staff\Detail.cshtml.g.cs
+C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\Razor\Views\Staff\Index.cshtml.g.cs
+C:\workspace\1670-gch0904\ApplicationDevelopment\web10\obj\Debug\netcoreapp3.1\Razor\Views\Staff\Update.cshtml.g.cs
