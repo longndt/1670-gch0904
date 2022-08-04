@@ -55,6 +55,11 @@ namespace web9.Controllers
             context.Mobile.Remove(mobile);
             //lưu thay đổi vào DB
             context.SaveChanges();
+            var message = "Delete mobile successfully !";
+            //Sử dụng TempData để gửi dữ liệu từ Controller về View
+            //nếu Response của hàm là return RedirectToAction() thay vì 
+            //return View()
+            TempData["message"] = message;
             return RedirectToAction("Index");
             //return RedirectToAction(nameof(Index));
         }
@@ -79,6 +84,8 @@ namespace web9.Controllers
                 //add dữ liệu từ object mobile vào DB
                 context.Add(mobile);
                 context.SaveChanges();
+                //chỉ gửi thông báo sau khi đã lưu vào DB
+                TempData["message"] = "Add mobile successfully";
                 //chuyển về trang index sau khi add thành công
                 return RedirectToAction(nameof(Index));
             }
@@ -108,6 +115,7 @@ namespace web9.Controllers
             {
                 context.Update(mobile);
                 context.SaveChanges();
+                TempData["message"] = "Edit mobile successfully";
                 return RedirectToAction("Index");
             }
             return View(mobile);

@@ -3,15 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace web9.Models
 {
-    public enum Color
-    {
-        Red, 
-        Green,
-        Yellow,
-        Black,
-        Silver,
-        Blue
-    }
     public class Mobile
     {
         public int Id { get; set; } //primary key - auto increment (start from 1)
@@ -27,7 +18,7 @@ namespace web9.Models
         public string Color { get; set; }
         
         [Required]
-        public decimal Price { get; set; }
+        public float Price { get; set; }
 
         [Url]
         public string Image { get; set; }

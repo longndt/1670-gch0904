@@ -17,6 +17,11 @@ Sự khác biệt giữa vòng lặp for và foreach:
 - foreach: không có index, load toàn bộ dữ liệu (cú pháp đơn giản hơn)
 - for: có index cho từng phần tử, có thể giới hạn dữ liệu được load
 -->
+@if (TempData["message"]!= null)
+{
+   <p class="alert alert-primary">@TempData["message"]</p>
+}
+
 
 <!-- Giao diện quản lý dành cho admin -->
 <table class="table table-success">
