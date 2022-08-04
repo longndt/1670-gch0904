@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using web10.Data;
 
@@ -17,7 +18,9 @@ namespace web10.Controllers
         //view all staffs
         public IActionResult Index()
         {
-            var staffs = context.Staffs.ToList();  //array of Staff objects
+            var staffs = context.Staffs
+                .Include(s => s.Department)
+                .ToList();  //array of Staff objects
             return View(staffs); //gửi dữ liệu sang view bằng model
         }
 
@@ -28,7 +31,10 @@ namespace web10.Controllers
             {
                 return NotFound();
             }
-            var staff = context.Staffs.Find(id);  //Staff object
+            var staff = context.Staffs
+                                .Include(s => s.Department) 
+                                .FirstOrDefault(s => s.Id == id);
+                                //Staff object
             return View(staff);
         }
     }
