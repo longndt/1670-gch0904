@@ -1,0 +1,31 @@
+﻿@model web11.Models.Capital
+
+<div class="container text-center mt-3">
+    <form class="card p-3 bg-light" asp-controller="Capital" asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <h3 class="text text-danger">Edit capital</h3>
+        <div class="form-group">
+            <label asp-for="Name" class="text text-success"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Area" class="text text-success"></label>
+            <input asp-for="Area" class="form-control" />
+            <span asp-validation-for="Area" class="text text-danger"></span>
+        </div>
+         <div class="form-group">
+            <label class="text text-success">Country name</label>
+            <select asp-for="CountryId" class="form-control">
+                <option>Select a country</option>
+                @foreach (var country in ViewBag.Countries)
+               {
+                    <option value="@country.Id">@country.Name</option>   
+               }
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Edit" />
+        </div>
+    </form>
+</div>

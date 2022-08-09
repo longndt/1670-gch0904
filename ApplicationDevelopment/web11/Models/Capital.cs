@@ -1,9 +1,15 @@
-﻿namespace web11.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace web11.Models
 {
     //relationship (OneToOne): Capital - Country
     public class Capital
     {
         public int Id { get; set; }  //PK
+
+        [Required]
+        [MinLength(3)]
+        [MaxLength(30)]
         public string Name { get; set; }
 
         public float Area { get; set; }
