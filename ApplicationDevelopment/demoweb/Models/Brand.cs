@@ -15,6 +15,7 @@ namespace demoweb.Models
         
         public ICollection<Mobile> Mobiles { get; set; }
 
+        [Display(Name = "Country Name")]
         public int CountryId { get; set; }
         public Country Country { get; set; }
     }
