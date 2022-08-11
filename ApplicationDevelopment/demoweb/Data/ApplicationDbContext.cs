@@ -17,11 +17,13 @@ namespace demoweb.Data
         //tạo bảng
         public DbSet<Brand> Brand { get; set; }
         public DbSet<Mobile> Mobile { get; set; }
+        public DbSet<Country> Country { get; set; }
 
         //add dữ liệu ban đầu cho bảng
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            SeedCountry(builder);
             SeedBrand(builder);
             SeedMobile(builder);
             //add dữ liệu cho 3 bảng: User, Role, UserRole => Authentication (Login/Logout) + Authorization (Role Assign)
@@ -30,18 +32,27 @@ namespace demoweb.Data
             SeedUserRole(builder);
         }
 
+        private void SeedCountry(ModelBuilder builder)
+        {
+            builder.Entity<Country>().HasData(
+                new Country { Id = 1, Name = "Korea" },
+                new Country { Id = 2, Name = "USA" },
+                new Country { Id = 3, Name = "China" }
+                );
+        }
+
         private void SeedUserRole(ModelBuilder builder)
         {
             builder.Entity<IdentityUserRole<string>>().HasData(
                 new IdentityUserRole<string>
                 {
                     UserId = "1",
-                    RoleId = "A"
+                    RoleId = "1"
                 },
                 new IdentityUserRole<string>
                 {
                     UserId = "2",
-                    RoleId = "B"
+                    RoleId = "2"
                 }
             );
         }
@@ -51,12 +62,12 @@ namespace demoweb.Data
             builder.Entity<IdentityRole>().HasData(
                 new IdentityRole
                 {
-                    Id = "A",
+                    Id = "1",
                     Name = "Admin"
                 },
                 new IdentityRole
                 {
-                    Id = "B",
+                    Id = "2",
                     Name = "Customer"
                 }
             );
@@ -68,16 +79,16 @@ namespace demoweb.Data
             var admin = new IdentityUser
             {
                 Id = "1",
+                Email = "admin@gmail.com",
                 UserName = "admin@gmail.com",
-                NormalizedUserName = "admin@gmail.com",
-                Email = "admin@gmail.com"
+                NormalizedUserName = "admin@gmail.com"
             };
             var customer = new IdentityUser
             {
                 Id = "2",
+                Email = "customer@gmail.com",
                 UserName = "customer@gmail.com",
-                NormalizedUserName = "customer@gmail.com",
-                Email = "customer@gmail.com"
+                NormalizedUserName = "customer@gmail.com"
             };
 
             //khai báo thư viện để mã hóa mật khẩu cho user
@@ -161,9 +172,9 @@ namespace demoweb.Data
         private void SeedBrand(ModelBuilder builder)
         {
             builder.Entity<Brand>().HasData(
-                new Brand { Id = 1, Name = "Samsung" },
-                new Brand { Id = 2, Name = "Apple" },
-                new Brand { Id = 3, Name = "Xiaomi" }
+                new Brand { Id = 1, Name = "Samsung" , CountryId = 1},
+                new Brand { Id = 2, Name = "Apple" , CountryId = 2 },
+                new Brand { Id = 3, Name = "Xiaomi" , CountryId = 3 }
              );
             // throw new NotImplementedException();
         }
