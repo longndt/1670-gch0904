@@ -6,6 +6,9 @@ namespace demoweb.Models
     public class Country
     {
         public int Id { get; set; }
+        
+        [Required]
+        [MinLength(3)]
         public string Name { get; set; }
         
         public ICollection<Brand> Brands { get; set; }
