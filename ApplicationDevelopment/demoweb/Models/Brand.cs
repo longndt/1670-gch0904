@@ -10,13 +10,16 @@ namespace demoweb.Models
     {
         public int Id { get; set; }
 
+        [Required]
         [StringLength(20, MinimumLength = 3)]
         public string Name { get; set; }
         
         public ICollection<Mobile> Mobiles { get; set; }
 
+        [Required]
         [Display(Name = "Country Name")]
         public int CountryId { get; set; }
+        
         public Country Country { get; set; }
     }
 }
