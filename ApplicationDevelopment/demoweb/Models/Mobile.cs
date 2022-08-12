@@ -15,24 +15,28 @@ namespace demoweb.Models
     {
         public int Id { get; set; }
 
+        [Required]
         [MinLength(3, ErrorMessage = "Mobile name must be at least 3 characters")]
         [MaxLength(30)]
         public string Name { get; set; }
 
+        [Required]
         [Range(1, 100)]
         public int Quantity { get; set; }
 
+        [Required]
         public double Price { get; set; }
 
         [Required]
         public Color Color { get; set; }
 
+        [Required]
         [Url]
         public string Image { get; set; }
 
         public Brand Brand { get; set; }
         
-
+        [Required]
         [Display(Name = "Brand name")]
         public int BrandId { get; set; }
     }
