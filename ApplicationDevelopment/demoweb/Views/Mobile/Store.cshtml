@@ -9,8 +9,8 @@
                     <div class="card">
                         <div class="card-body">
 						    <img class="card-img-top" src="@mobile.Image" width="150" height="100">
-                            <h4 class="text text-primary">@mobile.Name</h5>
-                            <h5 class="text text-success">@mobile.Price $</p>
+                            <h4 class="text text-primary">@mobile.Name</h4>
+                            <h5 class="text text-success">@mobile.Price $</h5>
                         </div>
                         @if (mobile.Quantity == 0)
                         {
@@ -21,7 +21,7 @@
                         else
                         {
                             <div class="card-subtitle">
-                                <h6 class="text text-danger">@mobile.Quantity</p>
+                                <h6 class="text text-danger">@mobile.Quantity</h6>
                             </div>
                             <div class="card-footer">
                                 <form asp-controller="Order" asp-action="Detail">
