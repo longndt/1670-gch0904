@@ -164,6 +164,66 @@ namespace demoweb.Data
                                   Quantity = 20,
                                   BrandId = 2,
                                   Image = "https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2021/09/15/image-removebg-preview-15.png"
+                              },
+                              new Mobile
+                              {
+                                  Id = 7,
+                                  Name = "Galaxy S22 Ultra",
+                                  Color = Color.Black,
+                                  Price = 999.99,
+                                  Quantity = 10,
+                                  BrandId = 1,
+                                  Image = "https://images.samsung.com/vn/smartphones/galaxy-s22-ultra/images/galaxy-s22-ultra_jump_models_s.png"
+                              },
+                  new Mobile
+                  {
+                      Id = 8,
+                      Name = "Galaxy S22 Ultra",
+                      Color = Color.Black,
+                      Price = 999.99,
+                      Quantity = 30,
+                      BrandId = 1,
+                      Image = "https://images.samsung.com/vn/smartphones/galaxy-s22-ultra/images/galaxy-s22-ultra_jump_models_s.png"
+                  },
+                    new Mobile
+                    {
+                        Id = 9,
+                        Name = "Galaxy S22 Ultra",
+                        Color = Color.Black,
+                        Price = 999.99,
+                        Quantity = 20,
+                        BrandId = 1,
+                        Image = "https://images.samsung.com/vn/smartphones/galaxy-s22-ultra/images/galaxy-s22-ultra_jump_models_s.png"
+                    },
+                      new Mobile
+                      {
+                          Id = 10,
+                          Name = "iPhone 13 Pro Max",
+                          Color = Color.Blue,
+                          Price = 1299.99,
+                          Quantity = 50,
+                          BrandId = 2,
+                          Image = "https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2021/09/15/image-removebg-preview-15.png"
+                      },
+                          new Mobile
+                          {
+                              Id = 11,
+                              Name = "iPhone 13 Pro Max",
+                              Color = Color.Blue,
+                              Price = 1299.99,
+                              Quantity = 40,
+                              BrandId = 2,
+                              Image = "https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2021/09/15/image-removebg-preview-15.png"
+                          },
+                              new Mobile
+                              {
+                                  Id = 12,
+                                  Name = "iPhone 13 Pro Max",
+                                  Color = Color.Blue,
+                                  Price = 1299.99,
+                                  Quantity = 20,
+                                  BrandId = 2,
+                                  Image = "https://cdn.hoanghamobile.com/i/productlist/dsp/Uploads/2021/09/15/image-removebg-preview-15.png"
                               }
             );
             //throw new NotImplementedException();
