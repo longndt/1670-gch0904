@@ -17,9 +17,12 @@ namespace demoweb.Controllers
         }
 
         //load toàn bộ dữ liệu của bảng  
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
-            return View(context.Mobile.ToList());
+            //xếp mobile mới được hiển thị ở đầu danh sách (sort id giảm dần)
+            var mobiles = context.Mobile.OrderByDescending(m => m.Id).ToList();
+            return View(mobiles);
         }
 
         [Authorize(Roles = "Customer")]
@@ -41,6 +44,7 @@ namespace demoweb.Controllers
         }
 
         //xem thông tin theo id
+        [Authorize(Roles = "Admin, Customer")]
         public IActionResult Detail(int id)
         {
             var mobile = context.Mobile.Include(m => m.Brand)  //Mobile - Brand : M - 1
@@ -102,6 +106,25 @@ namespace demoweb.Controllers
             }
             //nếu dữ liệu không hợp lệ thì trả về form để nhập lại
             return View(mobile);
+        }
+
+        public IActionResult PriceAsc()
+        {
+            var mobiles = context.Mobile.OrderBy(m => m.Price).ToList();
+            return View("Store",mobiles);
+        }
+
+        public IActionResult PriceDesc()
+        {
+            var mobiles = context.Mobile.OrderByDescending(m => m.Price).ToList();
+            return View("Store",mobiles);
+        }
+
+        [HttpPost]
+        public IActionResult Search(string keyword)
+        {
+            var mobiles = context.Mobile.Where(m => m.Name.Contains(keyword)).ToList();
+            return View("Store", mobiles);
         }
     }
 }

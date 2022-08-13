@@ -19,6 +19,8 @@ namespace demoweb.Data
         public DbSet<Mobile> Mobile { get; set; }
         public DbSet<Country> Country { get; set; }
 
+       public DbSet<Order> Order { get; set; } 
+
         //add dữ liệu ban đầu cho bảng
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -63,12 +65,14 @@ namespace demoweb.Data
                 new IdentityRole
                 {
                     Id = "1",
-                    Name = "Admin"
+                    Name = "Admin",
+                    NormalizedName = "Admin"
                 },
                 new IdentityRole
                 {
                     Id = "2",
-                    Name = "Customer"
+                    Name = "Customer",
+                    NormalizedName = "Customer"
                 }
             );
         }

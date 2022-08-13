@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace demoweb.Models
 {
@@ -39,5 +41,8 @@ namespace demoweb.Models
         [Required]
         [Display(Name = "Brand name")]
         public int BrandId { get; set; }
+
+        //Mobile - Order: 1 to Many
+        public ICollection<Order> Orders { get; set; }
     }
 }

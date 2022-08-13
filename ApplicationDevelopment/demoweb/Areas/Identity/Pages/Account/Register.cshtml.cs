@@ -78,6 +78,11 @@ namespace demoweb.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
+                    //set role mặc định là customer cho người dùng đăng ký từ form
+                    //lưu ý: phải add thuộc tính NormalizedName khi add role bằng file ApplicationDbContext
+                    var role = "Customer";
+                    await _userManager.AddToRoleAsync(user,role);
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

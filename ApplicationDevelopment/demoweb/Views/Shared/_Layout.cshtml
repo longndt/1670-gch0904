@@ -17,23 +17,32 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="h3 text text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="h3 text text-success ml-3" asp-area="" asp-controller="Mobile" asp-action="Store">Store</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="h3 text text-success ml-3" asp-area="" asp-controller="Mobile" asp-action="Index">Mobile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="h3 text text-success ml-3" asp-area="" asp-controller="Brand" asp-action="Index">Brand</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="h3 text text-success ml-3" asp-area="" asp-controller="Order" asp-action="Index">Order</a>
-                        </li>
-                    </ul>
+                    @*  set navigation bar cho role admin*@
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="h3 text text-success ml-3" asp-area="" asp-controller="Mobile" asp-action="Index">Mobile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="h3 text text-success ml-3" asp-area="" asp-controller="Brand" asp-action="Index">Brand</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="h3 text text-success ml-3" asp-area="" asp-controller="Order" asp-action="Index">Order</a>
+                            </li>
+                        </ul>
+                    }
+                    else if (User.Identity.IsAuthenticated && User.IsInRole("Customer"))
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="h3 text text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="h3 text text-success ml-3" asp-area="" asp-controller="Mobile" asp-action="Store">Store</a>
+                            </li>
+                        </ul>
+                    }
                 </div>
             </div>
         </nav>
